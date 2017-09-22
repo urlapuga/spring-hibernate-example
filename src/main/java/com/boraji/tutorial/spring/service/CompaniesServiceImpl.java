@@ -1,8 +1,6 @@
 package com.boraji.tutorial.spring.service;
 
 import com.boraji.tutorial.spring.dao.CompaniesDao;
-import com.boraji.tutorial.spring.dao.Crud;
-import com.boraji.tutorial.spring.dao.UserDao;
 import com.boraji.tutorial.spring.serviceEntities.Companies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,7 +17,8 @@ public class CompaniesServiceImpl implements CompaniesService {
     @Transactional
     @Override
     public boolean create(Companies companies) {
-        return companiesDao.create(companies);
+        companiesDao.create(companies);
+        return false;
     }
 
     @Transactional(readOnly = true)

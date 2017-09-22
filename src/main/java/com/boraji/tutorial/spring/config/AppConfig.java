@@ -47,7 +47,7 @@ public class AppConfig {
 
         factoryBean.setHibernateProperties(props);
         factoryBean.setAnnotatedClasses(Companies.class,Employees.class, Positions.class,
-                Tasks.class, TaskStatus.class
+                Tasks.class, TaskStatus.class,Pinger.class
         );
         return factoryBean;
     }

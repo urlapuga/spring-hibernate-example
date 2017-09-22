@@ -1,12 +1,10 @@
 package com.boraji.tutorial.spring.dao;
 
-import com.boraji.tutorial.spring.entity.User;
 import com.boraji.tutorial.spring.serviceEntities.Companies;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
@@ -18,9 +16,8 @@ public class CompaniesDaoImpl implements CompaniesDao{
     private SessionFactory sessionFactory;
 
     @Override
-    public boolean create(Companies c) {
+    public void create(Companies c) {
         sessionFactory.getCurrentSession().save(c);
-        return true;
     }
 
     @Override
@@ -35,12 +32,12 @@ public class CompaniesDaoImpl implements CompaniesDao{
     }
 
     @Override
-    public boolean update(Companies o) {
-        return false;
+    public void update(Companies o) {
+
     }
 
     @Override
-    public boolean delete(Companies o) {
-        return false;
+    public void delete(Companies o) {
+
     }
 }
